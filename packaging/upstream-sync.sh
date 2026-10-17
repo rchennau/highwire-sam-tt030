@@ -20,6 +20,7 @@ git diff --stat sam-tt030...upstream/main | tail -1
 [ "$mode" = "--merge" ] || { echo "upstream-sync: run with --merge to test-merge and build"; exit 0; }
 b=upstream-eval/$(date -u +%Y%m%d)
 git checkout -q -B "$b" sam-tt030
+trap 'git checkout -q sam-tt030' EXIT      # leave the tree on sam-tt030: build_highwire_rpm.sh packages HEAD
 if ! git merge -q --no-edit upstream/main; then
     echo "upstream-sync: MERGE CONFLICT on $b:"; git diff --name-only --diff-filter=U; git merge --abort; exit 1
 fi
