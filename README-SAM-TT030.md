@@ -18,10 +18,10 @@ agent system, on branch **`sam-tt030`**. `main` mirrors upstream untouched.
 
 | ID | Requirement | Acceptance check | Status |
 | :--- | :--- | :--- | :--- |
-| FR-1 | Relabel as **HighWire<sup>TT</sup>**. GEM menu and window text, where no markup is possible, read `HighWireTT`. The default start page (`html/index.htm`) says *"Welcome to HighWire<sup>TT</sup>, your new favorite Atari TT browser (built by SAM)."* Docs use the new name. (Operator, 2026-10-17.) | Start page on the TT shows the line with TT as superscript. The About box and the XaAES application menu read HighWireTT. | done in 0.4.8-sam2 |
+| FR-1 | Relabel as **HighWire<sup>TT</sup>**. GEM menu and window text, where no markup is possible, read `HighWireTT`. The default start page (`html/index.htm`) says *"Welcome to HighWire<sup>TT</sup>, your new favorite Atari TT browser (built by SAM)."* Docs use the new name. (Operator, 2026-10-17.) | Start page on the TT shows the line with TT as superscript. The About box and the XaAES application menu read HighWireTT. | done: text in 0.4.8-sam2, logo in 0.4.8-sam3 |
 
-Not relabelled, because they are not text: the logo bitmap (`html/images/logotst2.gif`) and the RSC menu-bar
-title, which is binary resource data.
+The start-page logo (`html/images/logotst2.gif`) carries a superscript TT after "HighWire" (0.4.8-sam3), drawn in
+the logo's own letter texture. Not relabelled: the RSC menu-bar title, which is binary resource data.
 
 ## Why a proxy and not TLS on the TT
 
