@@ -20,7 +20,7 @@ agent system, on branch **`sam-tt030`**. `main` mirrors upstream untouched.
 | :--- | :--- | :--- | :--- |
 | FR-1 | Relabel as **HighWire<sup>TT</sup>**. GEM menu and window text, where no markup is possible, read `HighWireTT`. The default start page (`html/index.htm`) says *"Welcome to HighWire<sup>TT</sup>, your new favorite Atari TT browser (built by SAM)."* Docs use the new name. (Operator, 2026-10-17.) | Start page on the TT shows the line with TT as superscript. The About box and the XaAES application menu read HighWireTT. | done: text in 0.4.8-sam2; amber-on-black page, logo and footer in 0.4.8-sam4 |
 
-The start page is amber on black (`bgcolor #000000`, text `#ffb000`, P3 amber), and its footer names
+The start page is amber on black (`bgcolor #000000`, text `#d98941`, the amber measured from the operator's reference photo), and its footer names
 HighWire<sup>TT</sup>. The logo (`html/images/logotst2.gif`) is the upstream logo inverted to amber on black, with a
 small superscript TT after "HighWire" (0.4.8-sam4; operator review 2026-10-17). Not relabelled: the RSC menu-bar title, which is binary resource data.
 
