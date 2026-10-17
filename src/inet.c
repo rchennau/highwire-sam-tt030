@@ -108,6 +108,7 @@ static long  __CDECL demand_connect (long addr, long port, long tout_sec)
 #elif defined(USE_MINT) || defined(USE_MAGICNET) /*****************************/
 #if   defined(USE_MINT)
 # include <netdb.h>
+# include <arpa/inet.h>
 # include <sys/socket.h>
 # include <netinet/in.h>
 # include <unistd.h>
@@ -256,7 +257,13 @@ inet_host_addr (const char * name, long * addr)
 	short ret = -1;
 
 #if defined(USE_MINT) || defined(USE_MAGICNET)
-	struct hostent * host = gethostbyname (name);
+	struct hostent * host;
+	unsigned long    num = inet_addr (name);  /* dotted quad: mintlib's gethostbyname() does not take one */
+	if (num != (unsigned long)-1) {
+		*addr = (long)num;
+		return E_OK;
+	}
+	host = gethostbyname (name);
 	if (host) {
 		*addr = *(long*)host->h_addr;
 		ret   = E_OK;

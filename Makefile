@@ -6,6 +6,9 @@ DISTDIR = dist
 BUILDDIR = build
 
 # compiler settings
+# SAM TT030 fork: gcc 15 (the SAM cross toolchain) adds stringop-overflow/array-bounds warnings that
+# upstream's gcc did not; packaging/build-tt030.sh builds with WERROR=-Wno-error. Upstream default unchanged.
+WERROR ?= -Werror
 
 CROSS = m68k-atari-mint-
 CC = $(CROSS)gcc -g #-DDEBUG
@@ -77,7 +80,7 @@ WARN = \
 	-Wpointer-arith \
 	-Wcast-qual \
 	$(DISABLED_WARNINGS) \
-	-Werror 
+	$(WERROR) 
 
 
 INCLUDE = 

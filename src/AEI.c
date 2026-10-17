@@ -370,7 +370,8 @@ menu_about (void)
 	form_alert (1, "[1]"
 	               "[" _HIGHWIRE_FULLNAME_ " HTML Browser"
 	               "|Core v. " _HIGHWIRE_VERSION_
-	               "|http://highwire.atari-users.net/]"
+	               "|" _HIGHWIRE_FORK_
+	               "|github.com/rchennau/highwire-sam-tt030]"
 	               "[  OK  ]");
 }
 
