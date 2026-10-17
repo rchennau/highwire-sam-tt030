@@ -261,7 +261,7 @@ key_pressed (WORD scan, WORD ascii, UWORD kstate)
 		if (ctrl)  /* 0x000E:  CTRL+N, Open new window on home page */
 		{
 			if (shift)  /* SHIFT+CTRL+N Open new window on blank page */
-				new_hwWind ("HighWire", NULL, TRUE);
+				new_hwWind (_HIGHWIRE_FULLNAME_, NULL, TRUE);
 			else
 				new_hwWind ("", cfg_StartPage, TRUE);
 		}

@@ -4,7 +4,7 @@
 
 #include "hw-types.h"   /* get base definitions */
 
-#define _HIGHWIRE_FULLNAME_  "HighWire"
+#define _HIGHWIRE_FULLNAME_  "HighWireTT"   /* SAM TT030 fork FR-1: HighWire^TT (superscript where markup allows) */
 #define _HIGHWIRE_RSC_       "highwire.rsc"
 #define _HIGHWIRE_CFG_       "highwire.cfg"
 #define _HIGHWIRE_BOOKMARK_  "bookmark.htm"
